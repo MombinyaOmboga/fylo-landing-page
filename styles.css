@@ -18,25 +18,34 @@ header{
     align-items: center;
 }
 
+.logo-container img{
+    width: 100px;
+}
+
 .nav-links{
     list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
+}
+
+.nav-links li a{
+    color: hsl(0, 0%, 48%);
+    text-decoration: none;
 }
 
 #top-section, .mid-section{
     width: 100%;
-    padding: 40px;
+    padding: 20px;
 }
 
 .hero-div{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width:80%;
-    gap: 40px;
+    width:80%;
+    gap: 10px;
 }
 
 
@@ -54,25 +63,32 @@ h2{
 }
 
 #image-container img{
-    width: 400px;
-    padding-left: 50px;
+    width: 100%;
+    max-width: 700px;
+    padding-left: 120px;
 }
 
 #top-form input{
     background-color: rgb(205, 248, 222);
     border-radius: 3px;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 input, button{
     padding: 8px;
     border: none;
+    box-sizing: border-box;
 }
 
 button{
     background: hsl(224, 93%, 58%);
-    border-radius: 5px;
+    border-radius: 3px;
     color: #fff;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 .mid-hero{
@@ -82,7 +98,8 @@ button{
 }
 
 #image-container2 img{
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .info{
@@ -99,11 +116,12 @@ button{
 }
 
 .card{
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: auto;
     box-shadow: 4px 0px 10px #888888;;
     font-size: small;
-    margin-top: 50px;
+    margin-top: 20px;
     border-radius: 3px;
 }
 
@@ -144,35 +162,37 @@ button{
 #sign-up{
     background-color: hsl(238, 22%, 44%);
     width: 100%;
-    height: 250px;
-    padding: 40px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .bottom-hero{
     width: 40%;
-    margin-right: 20%
+    margin-right: 20%;
 }
 
 #register-form{
-    margin-left: 5%
+    margin-left: 5%;
 }
 
 
 #register-form input{
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     margin-bottom: 10px;
 }
 
 #smade{
     background-color: hsl(243, 87%, 12%);
     color: #ffffff;
-    height: auto;
-    padding-left: 60px;
+    padding-left: 20px;
+    box-sizing: border-box;
 }
 
 #logo{
-    padding-top: 80px;
+    padding-top: 20px;
     margin-bottom: 10px;
+    width: 100px;
 }
 
 #smade ul {
@@ -184,10 +204,78 @@ button{
 }
 
 .social{
-    margin-right: 20px;
+    margin-right: 10px;
+}
+
+.social a{
+    color: #fff;
+}
+
+.social a:hover{
+    color: hsl(239, 40%, 53%);
 }
 
 .container{
     display:flex;
     justify-content: space-between;
+}
+
+#more li a, #contact li a{
+    text-decoration: none;
+}
+
+
+#more li a:hover{
+    cursor: pointer;
+    color:  hsl(239, 40%, 53%);   
+}
+
+#contact li a:hover{
+    color: hsl(239, 40%, 53%);
+}
+
+#more li a, #contact li a:visited{
+      color: white;
+}
+
+
+.comm li i{
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #top-section,
+    .mid-section {
+        padding: 10px;
+    }
+
+    .hero-div {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #image-container img,
+    #image-container2 img {
+        padding-left: 0;
+    }
+
+    #sign-up,
+    .bottom-hero {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #register-form {
+        margin-left: 0;
+    }
 }
